@@ -1,0 +1,8 @@
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\C#\SocketsServerStarter\SocketsServerStarter\bin\Debug\SocketsServerStarter.exe.config
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\C#\SocketsServerStarter\SocketsServerStarter\bin\Debug\SocketsServerStarter.exe
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\C#\SocketsServerStarter\SocketsServerStarter\bin\Debug\SocketsServerStarter.pdb
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\C#\SocketsServerStarter\SocketsServerStarter\obj\Debug\SocketsServerStarter.csproj.AssemblyReference.cache
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\C#\SocketsServerStarter\SocketsServerStarter\obj\Debug\SocketsServerStarter.csproj.SuggestedBindingRedirects.cache
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\C#\SocketsServerStarter\SocketsServerStarter\obj\Debug\SocketsServerStarter.csproj.CoreCompileInputs.cache
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\C#\SocketsServerStarter\SocketsServerStarter\obj\Debug\SocketsServerStarter.exe
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\C#\SocketsServerStarter\SocketsServerStarter\obj\Debug\SocketsServerStarter.pdb
