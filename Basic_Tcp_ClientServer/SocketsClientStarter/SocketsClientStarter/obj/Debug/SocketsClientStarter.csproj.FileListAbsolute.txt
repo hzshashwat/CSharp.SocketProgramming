@@ -1,0 +1,8 @@
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\CSharp.SocketProgramming\Basic_Tcp_ClientServer\SocketsClientStarter\SocketsClientStarter\bin\Debug\SocketsClientStarter.exe.config
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\CSharp.SocketProgramming\Basic_Tcp_ClientServer\SocketsClientStarter\SocketsClientStarter\bin\Debug\SocketsClientStarter.exe
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\CSharp.SocketProgramming\Basic_Tcp_ClientServer\SocketsClientStarter\SocketsClientStarter\bin\Debug\SocketsClientStarter.pdb
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\CSharp.SocketProgramming\Basic_Tcp_ClientServer\SocketsClientStarter\SocketsClientStarter\obj\Debug\SocketsClientStarter.csproj.AssemblyReference.cache
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\CSharp.SocketProgramming\Basic_Tcp_ClientServer\SocketsClientStarter\SocketsClientStarter\obj\Debug\SocketsClientStarter.csproj.SuggestedBindingRedirects.cache
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\CSharp.SocketProgramming\Basic_Tcp_ClientServer\SocketsClientStarter\SocketsClientStarter\obj\Debug\SocketsClientStarter.csproj.CoreCompileInputs.cache
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\CSharp.SocketProgramming\Basic_Tcp_ClientServer\SocketsClientStarter\SocketsClientStarter\obj\Debug\SocketsClientStarter.exe
+C:\Users\91955\Dropbox\My PC (LAPTOP-MSB4JQBC)\Desktop\CSharp.SocketProgramming\Basic_Tcp_ClientServer\SocketsClientStarter\SocketsClientStarter\obj\Debug\SocketsClientStarter.pdb
