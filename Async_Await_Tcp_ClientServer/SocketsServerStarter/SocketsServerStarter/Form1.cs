@@ -24,5 +24,10 @@ namespace SocketsServerStarter
         {
             mServer.StartListeningForIncomingConnection();
         }
+
+        private void btnSendAll_Click(object sender, EventArgs e)
+        {
+            mServer.SendToAll(txtMessage.Text.Trim());
+        }
     }
 }

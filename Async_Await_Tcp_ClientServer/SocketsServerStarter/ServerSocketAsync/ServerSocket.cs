@@ -16,7 +16,14 @@ namespace ServerSocketAsync
         int mPort;
         TcpListener mTcpListener;
 
+        List<TcpClient> mClients;
+
         public bool KeepRunning { get; set; }
+
+        public ServerSocket()
+        {
+                mClients = new List<TcpClient>();
+        }
 
         public async void StartListeningForIncomingConnection(IPAddress iPAddr = null, int iPort = 23000)
         {
@@ -46,8 +53,11 @@ namespace ServerSocketAsync
                 while(KeepRunning)
                 {
                     var returnedByAccept = await mTcpListener.AcceptTcpClientAsync();
+                    mClients.Add(returnedByAccept);
 
-                    System.Diagnostics.Debug.WriteLine("Client Connected successfully: " + returnedByAccept.ToString());
+                    System.Diagnostics.Debug.WriteLine(
+                        string.Format("Client Connected successfully. Count: {0} - {1}", mClients.Count, returnedByAccept.Client.RemoteEndPoint)
+                        );
 
                     TakeCareOfTCPClient(returnedByAccept);
                 }
@@ -81,6 +91,8 @@ namespace ServerSocketAsync
 
                     if (nRet == 0)
                     {
+                        RemoveClient(paramClient);
+
                         System.Diagnostics.Debug.WriteLine("Socket Disconnected");
                         break;
                     }
@@ -95,7 +107,39 @@ namespace ServerSocketAsync
 
             catch (Exception excp)
             {
+                RemoveClient(paramClient);
                 System.Diagnostics.Debug.WriteLine(excp.ToString());
+            }
+        }
+
+        private void RemoveClient(TcpClient paramClient)
+        {
+            if(mClients.Contains(paramClient))
+            {
+                mClients.Remove(paramClient);
+                Debug.WriteLine(String.Format("Client removed, count: {0}", mClients.Count));
+            }
+        }
+
+        public async void SendToAll(string leMessage)
+        {
+            if (string.IsNullOrEmpty(leMessage))
+            {
+                return;
+            }
+
+            try
+            {
+                byte[] buffMessage = Encoding.ASCII.GetBytes(leMessage);
+
+                foreach(TcpClient c in mClients)
+                {
+                    c.GetStream().WriteAsync(buffMessage, 0, buffMessage.Length);
+                }
+            }
+            catch (Exception excp)
+            {
+                Debug.WriteLine(excp.ToString());
             }
         }
     }
