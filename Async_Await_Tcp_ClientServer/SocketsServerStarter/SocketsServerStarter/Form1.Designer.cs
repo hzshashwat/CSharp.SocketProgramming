@@ -32,6 +32,7 @@
             this.btnSendAll = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMessage = new System.Windows.Forms.TextBox();
+            this.btnStopServer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAcceptIncomingConnections
@@ -46,9 +47,9 @@
             // 
             // btnSendAll
             // 
-            this.btnSendAll.Location = new System.Drawing.Point(394, 90);
+            this.btnSendAll.Location = new System.Drawing.Point(415, 86);
             this.btnSendAll.Name = "btnSendAll";
-            this.btnSendAll.Size = new System.Drawing.Size(112, 26);
+            this.btnSendAll.Size = new System.Drawing.Size(112, 34);
             this.btnSendAll.TabIndex = 1;
             this.btnSendAll.Text = "Send All";
             this.btnSendAll.UseVisualStyleBackColor = true;
@@ -70,11 +71,21 @@
             this.txtMessage.Size = new System.Drawing.Size(276, 26);
             this.txtMessage.TabIndex = 3;
             // 
+            // btnStopServer
+            // 
+            this.btnStopServer.Location = new System.Drawing.Point(294, 12);
+            this.btnStopServer.Name = "btnStopServer";
+            this.btnStopServer.Size = new System.Drawing.Size(276, 46);
+            this.btnStopServer.TabIndex = 4;
+            this.btnStopServer.Text = "Stop Server";
+            this.btnStopServer.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnStopServer);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSendAll);
@@ -92,6 +103,7 @@
         private System.Windows.Forms.Button btnSendAll;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.Button btnStopServer;
     }
 }
 

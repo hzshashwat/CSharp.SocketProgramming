@@ -137,7 +137,31 @@ namespace ServerSocketAsync
                     c.GetStream().WriteAsync(buffMessage, 0, buffMessage.Length);
                 }
             }
-            catch (Exception excp)
+            catch (Exception excp)  
+            {
+                Debug.WriteLine(excp.ToString());
+            }
+        }
+
+        public void StopServer()
+        {
+            try
+            {
+                if (mTcpListener != null)
+                {
+                    mTcpListener.Stop();
+                }
+
+            foreach (TcpClient c in mClients)
+                {
+                    c.Close();
+                }
+
+                mClients.Clear();
+
+            }
+
+            catch(Exception excp)
             {
                 Debug.WriteLine(excp.ToString());
             }
