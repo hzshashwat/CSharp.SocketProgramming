@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -78,7 +79,40 @@ namespace ServerSocketAsync
                 await mClient.ConnectAsync(mServerIPAddress, mServerPort);
                 Console.WriteLine(string.Format("Connected to server IP/Port: {0} / {1}",
                     mServerIPAddress, mServerPort));
+
+                ReadDataAsync(mClient);
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                throw;
+            }
+        }
+
+        public async void ReadDataAsync(TcpClient client)
+        {
+            try
+            {
+                StreamReader clientStreamReader = new StreamReader(mClient.GetStream());
+                char[] buff = new char[1024];
+                int readByteCount = 0;
+
+                while(true)
+                {
+                    readByteCount = await clientStreamReader.ReadAsync(buff, 0, buff.Length);
+
+                    if (readByteCount <= 0)
+                    {
+                        Console.WriteLine("Disconnected from server.");
+                        mClient.Close();
+                        break;
+                    }
+
+                    Console.WriteLine(string.Format("Recieved bytes: {0} - Message: {1}", readByteCount, new string(buff)));
+                    Array.Clear(buff, 0, buff.Length);
+                }
+            }
+
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
