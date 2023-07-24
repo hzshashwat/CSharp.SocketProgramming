@@ -31,7 +31,7 @@ namespace ClientServerStarter
                 return;
             }
 
-            Task task = client.ConnectToServer();
+            client.ConnectToServer();
 
             string strInputUser = null;
 
