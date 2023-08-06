@@ -89,7 +89,7 @@ namespace ServerSocketAsync
             }
         }
 
-        public async void ReadDataAsync(TcpClient client)
+        public async Task ReadDataAsync(TcpClient client)
         {
             try
             {
@@ -117,6 +117,38 @@ namespace ServerSocketAsync
             {
                 Console.WriteLine(e.ToString());
                 throw;
+            }
+        }
+
+        public async Task SendToServer(string strInputUser)
+        {
+            if (string.IsNullOrEmpty(strInputUser))
+            {
+                Console.WriteLine("Empty string supplied to send.");
+                return;
+            }
+
+            if(mClient != null)
+            {
+                if (mClient.Connected)
+                {
+                    StreamWriter clientStreamWriter = new StreamWriter(mClient.GetStream());
+                    clientStreamWriter.AutoFlush = true;
+
+                    await clientStreamWriter.WriteAsync(strInputUser);
+                    Console.WriteLine("Data Sent...");
+                }
+            }
+        }
+
+        public void CloseAndDisconnect()
+        {
+            if (mClient != null)
+            {
+                if (mClient.Connected)
+                {
+                    mClient.Close();
+                }
             }
         }
     }

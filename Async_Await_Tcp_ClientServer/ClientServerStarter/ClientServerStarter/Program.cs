@@ -33,11 +33,20 @@ namespace ClientServerStarter
 
             client.ConnectToServer();
 
+
             string strInputUser = null;
 
             do
             {
                 strInputUser = Console.ReadLine();
+                if (strInputUser.Trim() != "<EXIT>")
+                {
+                    client.SendToServer(strInputUser);
+                }
+                else if (strInputUser.Equals("<EXIT>"))
+                {
+                    client.CloseAndDisconnect();
+                }
             } while (strInputUser != "<EXIT>");
         }
     }
